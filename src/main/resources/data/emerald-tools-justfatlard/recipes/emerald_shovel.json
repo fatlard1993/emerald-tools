@@ -6,15 +6,8 @@
     "/"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:emerald"
-    },
-    "/": {
-      "item": "minecraft:stick"
-    }
+    "#": { "item": "minecraft:emerald" },
+    "/": { "item": "minecraft:stick" }
   },
-  "result": {
-    "item": "emerald-tools-justfatlard:emerald_shovel",
-    "count": 1
-  }
+  "result": { "item": "emerald-tools-justfatlard:emerald_shovel" }
 }
