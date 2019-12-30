@@ -10,7 +10,7 @@
     }
   },
   "criteria": {
-    "has_emerald_armor": {
+    "has_emerald_tool": {
       "trigger": "minecraft:inventory_changed",
       "conditions": { "items": [{ "tag": "emerald-tools-justfatlard:emerald_tool" }] }
     }
