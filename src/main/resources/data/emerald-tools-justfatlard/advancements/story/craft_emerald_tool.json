@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:story/obtain_emerald",
+  "display": {
+    "icon": { "item": "emerald-tools-justfatlard:emerald_pickaxe" },
+    "title": {
+      "translate": "advancements.story.emerald-tools-justfatlard.craft_emerald_tool.title"
+    },
+    "description": {
+      "translate": "advancements.story.emerald-tools-justfatlard.craft_emerald_tool.description"
+    }
+  },
+  "criteria": {
+    "has_emerald_armor": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": { "items": [{ "tag": "emerald-tools-justfatlard:emerald_tool" }] }
+    }
+  }
+}

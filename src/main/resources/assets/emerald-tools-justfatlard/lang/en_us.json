@@ -2,5 +2,9 @@
   "item.emerald-tools-justfatlard.emerald_sword": "Emerald Sword",
   "item.emerald-tools-justfatlard.emerald_pickaxe": "Emerald Pickaxe",
   "item.emerald-tools-justfatlard.emerald_axe": "Emerald Axe",
-  "item.emerald-tools-justfatlard.emerald_shovel": "Emerald Shovel"
+  "item.emerald-tools-justfatlard.emerald_shovel": "Emerald Shovel",
+  "advancements.story.minecraft.obtain_emerald.title": "Livin' in a Villagers Paradise",
+  "advancements.story.minecraft.obtain_emerald.description": "Obtain an emerald",
+  "advancements.story.emerald-tools-justfatlard.craft_emerald_tool.title": "Villagers Secret Weapon",
+  "advancements.story.emerald-tools-justfatlard.craft_emerald_tool.description": "Craft an emerald tool"
 }
