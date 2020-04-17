@@ -7,17 +7,17 @@ import net.minecraft.recipe.Ingredient;
 public class EmeraldToolMaterial implements ToolMaterial {
 	@Override
 	public int getDurability() {
-		return 1000;
+		return 1532;
 	}
 
 	@Override
 	public float getAttackDamage() {
-		return 5.5F;
+		return 3.0F;
 	}
 
 	@Override
 	public float getMiningSpeed() {
-		return 13.0f;
+		return 8.0f;
 	}
 
 	@Override
@@ -32,6 +32,6 @@ public class EmeraldToolMaterial implements ToolMaterial {
 
 	@Override
 	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(Items.EMERALD);
+		return Ingredient.ofItems(Items.EMERALD_BLOCK);
 	}
 }
