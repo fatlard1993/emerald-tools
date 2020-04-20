@@ -17,8 +17,8 @@ public class EmeraldTools implements ModInitializer {
 	public final static EmeraldAxeItem EMERALD_AXE = new EmeraldAxeItem();
 	public final static HoeItem EMERALD_HOE = new HoeItem(EmeraldTools.EMERALD_TOOL_MATERIAL, 0, new Item.Settings().maxCount(1).group(ItemGroup.TOOLS));
 	public final static EmeraldPickaxeItem EMERALD_PICKAXE = new EmeraldPickaxeItem();
-	public final static ShovelItem EMERALD_SHOVEL = new ShovelItem(EmeraldTools.EMERALD_TOOL_MATERIAL, -2, -3, new Item.Settings().maxCount(1).group(ItemGroup.TOOLS));
-	public final static SwordItem EMERALD_SWORD = new SwordItem(EmeraldTools.EMERALD_TOOL_MATERIAL, 0, -2.4F, new Item.Settings().maxCount(1).group(ItemGroup.COMBAT));
+	public final static ShovelItem EMERALD_SHOVEL = new ShovelItem(EmeraldTools.EMERALD_TOOL_MATERIAL, 1.5F, -3.0F, new Item.Settings().maxCount(1).group(ItemGroup.TOOLS));
+	public final static SwordItem EMERALD_SWORD = new SwordItem(EmeraldTools.EMERALD_TOOL_MATERIAL, 3, -2.4F, new Item.Settings().maxCount(1).group(ItemGroup.COMBAT));
 
 	@Override
 	public void onInitialize(){

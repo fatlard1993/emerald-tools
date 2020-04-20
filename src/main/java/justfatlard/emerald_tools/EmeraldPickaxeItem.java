@@ -5,6 +5,6 @@ import net.minecraft.item.PickaxeItem;
 
 public class EmeraldPickaxeItem extends PickaxeItem {
 	public EmeraldPickaxeItem() {
-		super(EmeraldTools.EMERALD_TOOL_MATERIAL, -2, -2.8F, new Settings().maxCount(1).group(ItemGroup.TOOLS));
+		super(EmeraldTools.EMERALD_TOOL_MATERIAL, 1, -2.8F, new Settings().maxCount(1).group(ItemGroup.TOOLS));
 	}
 }

@@ -5,6 +5,6 @@ import net.minecraft.item.ItemGroup;
 
 public class EmeraldAxeItem extends AxeItem {
 	public EmeraldAxeItem() {
-		super(EmeraldTools.EMERALD_TOOL_MATERIAL, 2, -3, new Settings().maxCount(1).group(ItemGroup.TOOLS));
+		super(EmeraldTools.EMERALD_TOOL_MATERIAL, 5, -3.0F, new Settings().maxCount(1).group(ItemGroup.TOOLS));
 	}
 }

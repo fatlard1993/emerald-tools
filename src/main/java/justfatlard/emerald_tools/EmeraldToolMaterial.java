@@ -6,32 +6,20 @@ import net.minecraft.recipe.Ingredient;
 
 public class EmeraldToolMaterial implements ToolMaterial {
 	@Override
-	public int getDurability() {
-		return 1532;
-	}
+	public int getMiningLevel(){ return 3; }
 
 	@Override
-	public float getAttackDamage() {
-		return 3.0F;
-	}
+	public int getDurability(){ return 1532; }
 
 	@Override
-	public float getMiningSpeed() {
-		return 8.0f;
-	}
+	public float getMiningSpeed(){ return 8.0f; }
 
 	@Override
-	public int getMiningLevel() {
-		return 3;
-	}
+	public float getAttackDamage(){ return 3.0F; }
 
 	@Override
-	public int getEnchantability() {
-		return 20;
-	}
+	public int getEnchantability(){ return 20; }
 
 	@Override
-	public Ingredient getRepairIngredient() {
-		return Ingredient.ofItems(Items.EMERALD_BLOCK);
-	}
+	public Ingredient getRepairIngredient(){ return Ingredient.ofItems(Items.EMERALD_BLOCK); }
 }
