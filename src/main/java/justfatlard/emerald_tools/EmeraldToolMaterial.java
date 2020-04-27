@@ -9,13 +9,13 @@ public class EmeraldToolMaterial implements ToolMaterial {
 	public int getMiningLevel(){ return 3; }
 
 	@Override
-	public int getDurability(){ return 1532; }
+	public int getDurability(){ return 1632; }
 
 	@Override
-	public float getMiningSpeed(){ return 8.0f; }
+	public float getMiningSpeed(){ return 9.0f; }
 
 	@Override
-	public float getAttackDamage(){ return 3.0F; }
+	public float getAttackDamage(){ return 3.5F; }
 
 	@Override
 	public int getEnchantability(){ return 20; }
