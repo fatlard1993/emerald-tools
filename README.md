@@ -1,5 +1,8 @@
 # Emerald Tools
 
+[![CurseForge](http://cf.way2muchnoise.eu/full_emerald-tools_downloads.svg)](http://www.curseforge.com/minecraft/mc-mods/emerald-tools)
+[![CurseForge](http://cf.way2muchnoise.eu/versions/emerald-tools.svg)](http://www.curseforge.com/minecraft/mc-mods/emerald-tools)
+
 A [Minecraft](minecraft.net) mod built on [Fabric](fabricmc.net).
 
 With this mod you can craft the following tools with emerald blocks: Axe, Hoe, Pickaxe, Shovel, and Sword.
