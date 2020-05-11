@@ -1,7 +1,7 @@
 # Emerald Tools
 
-[![CurseForge](http://cf.way2muchnoise.eu/full_emerald-tools_downloads.svg)](http://www.curseforge.com/minecraft/mc-mods/emerald-tools)
-[![CurseForge](http://cf.way2muchnoise.eu/versions/emerald-tools.svg)](http://www.curseforge.com/minecraft/mc-mods/emerald-tools)
+[![CurseForge](http://cf.way2muchnoise.eu/full_simple-emerald-tools_downloads.svg)](http://www.curseforge.com/minecraft/mc-mods/simple-emerald-tools)
+[![CurseForge](http://cf.way2muchnoise.eu/versions/simple-emerald-tools.svg)](http://www.curseforge.com/minecraft/mc-mods/simple-emerald-tools)
 
 A [Minecraft](minecraft.net) mod built on [Fabric](fabricmc.net).
 
