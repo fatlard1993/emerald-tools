@@ -1,7 +1,9 @@
 {
   "parent": "minecraft:story/obtain_emerald_block",
   "display": {
-    "icon": { "item": "emerald-tools-justfatlard:emerald_pickaxe" },
+    "icon": {
+      "id": "emerald-tools-justfatlard:emerald_pickaxe"
+    },
     "title": {
       "translate": "advancements.story.emerald-tools-justfatlard.craft_emerald_tool.title"
     },
@@ -12,7 +14,13 @@
   "criteria": {
     "has_emerald_tool": {
       "trigger": "minecraft:inventory_changed",
-      "conditions": { "items": [{ "tag": "emerald-tools-justfatlard:emerald_tools" }] }
+      "conditions": {
+        "items": [
+          {
+            "items": "#emerald-tools-justfatlard:emerald_tools"
+          }
+        ]
+      }
     }
   }
 }

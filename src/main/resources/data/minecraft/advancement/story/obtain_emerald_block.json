@@ -1,7 +1,9 @@
 {
   "parent": "minecraft:story/iron_tools",
   "display": {
-    "icon": { "item": "minecraft:emerald_block" },
+    "icon": {
+      "id": "minecraft:emerald_block"
+    },
     "title": {
       "translate": "advancements.story.minecraft.obtain_emerald.title"
     },
@@ -12,7 +14,13 @@
   "criteria": {
     "has_emerald": {
       "trigger": "minecraft:inventory_changed",
-      "conditions": { "items": [{ "item": "minecraft:emerald_block" }] }
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:emerald_block"
+          }
+        ]
+      }
     }
   },
   "rewards": {
