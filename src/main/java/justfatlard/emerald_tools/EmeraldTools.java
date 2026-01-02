@@ -15,6 +15,8 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import net.minecraft.item.ItemGroups;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 public class EmeraldTools implements ModInitializer {
 	public static final String MOD_ID = "emerald-tools-justfatlard";
@@ -92,6 +94,19 @@ public class EmeraldTools implements ModInitializer {
 			})
 			.build();
 		PolymerItemGroupUtils.registerPolymerItemGroup(Identifier.of(MOD_ID, "emerald_tools"), emeraldToolsGroup);
+
+		// Add tools to vanilla Tools creative tab
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
+			entries.add(EMERALD_PICKAXE);
+			entries.add(EMERALD_AXE);
+			entries.add(EMERALD_SHOVEL);
+			entries.add(EMERALD_HOE);
+		});
+
+		// Add sword to vanilla Combat creative tab
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(entries -> {
+			entries.add(EMERALD_SWORD);
+		});
 
 		System.out.println("[emerald-tools] Loaded emerald-tools (server-side with Polymer)");
 	}
