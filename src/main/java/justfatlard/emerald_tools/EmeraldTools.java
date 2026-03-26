@@ -17,9 +17,12 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.item.ItemGroups;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EmeraldTools implements ModInitializer {
 	public static final String MOD_ID = "emerald-tools-justfatlard";
+	private static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
 	// Custom item tag for emerald tool repair items
 	public static final TagKey<Item> EMERALD_TOOL_REPAIR_ITEMS = TagKey.of(
@@ -108,6 +111,6 @@ public class EmeraldTools implements ModInitializer {
 			entries.add(EMERALD_SWORD);
 		});
 
-		System.out.println("[emerald-tools] Loaded emerald-tools (server-side with Polymer)");
+		LOGGER.info("Loaded emerald-tools (server-side with Polymer)");
 	}
 }

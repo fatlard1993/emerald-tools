@@ -7,10 +7,6 @@
   "authors": [
     "justfatlard"
   ],
-  "contact": {
-    "homepage": "",
-    "sources": ""
-  },
   "license": "MIT",
   "icon": "icon.png",
   "environment": "*",

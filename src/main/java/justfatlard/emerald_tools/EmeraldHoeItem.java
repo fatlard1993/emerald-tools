@@ -1,7 +1,6 @@
 package justfatlard.emerald_tools;
 
 import eu.pb4.polymer.core.api.item.PolymerItem;
-import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -9,11 +8,11 @@ import net.minecraft.item.ToolMaterial;
 import net.minecraft.util.Identifier;
 import xyz.nucleoid.packettweaker.PacketContext;
 
-public class EmeraldHoeItem extends HoeItem implements PolymerItem {
+public class EmeraldHoeItem extends Item implements PolymerItem {
 	private final Identifier modelId;
 
 	public EmeraldHoeItem(ToolMaterial material, float attackDamage, float attackSpeed, Item.Settings settings) {
-		super(material, attackDamage, attackSpeed, settings);
+		super(settings.hoe(material, attackDamage, attackSpeed));
 		this.modelId = Identifier.of(EmeraldTools.MOD_ID, "emerald_hoe");
 	}
 
