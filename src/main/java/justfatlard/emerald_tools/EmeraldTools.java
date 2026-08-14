@@ -20,13 +20,11 @@ public class EmeraldTools implements ModInitializer {
 	public static final String MOD_ID = "emerald-tools-justfatlard";
 	private static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	// Custom item tag for emerald tool repair items
 	public static final TagKey<Item> EMERALD_TOOL_REPAIR_ITEMS = TagKey.create(
 		Registries.ITEM,
 		Identifier.fromNamespaceAndPath(MOD_ID, "emerald_tool_repair_items")
 	);
 
-	// Create the emerald tool material
 	public static final ToolMaterial EMERALD_TOOL_MATERIAL = new ToolMaterial(
 		BlockTags.INCORRECT_FOR_DIAMOND_TOOL,  // Can mine everything diamond can
 		1717,                                   // Durability
@@ -36,12 +34,10 @@ public class EmeraldTools implements ModInitializer {
 		EMERALD_TOOL_REPAIR_ITEMS              // Repair items tag
 	);
 
-	// Helper method to create registry key
 	private static ResourceKey<Item> keyOf(String name) {
 		return ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(MOD_ID, name));
 	}
 
-	// Creative tab keys
 	private static final ResourceKey<CreativeModeTab> TOOLS_TAB = ResourceKey.create(
 		Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath("minecraft", "tools_and_utilities")
 	);
@@ -49,7 +45,6 @@ public class EmeraldTools implements ModInitializer {
 		Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath("minecraft", "combat")
 	);
 
-	// Tool items
 	public static final Item EMERALD_PICKAXE = new EmeraldPickaxeItem(
 		EMERALD_TOOL_MATERIAL, 1, -2.8F,
 		new Item.Properties().setId(keyOf("emerald_pickaxe"))
@@ -77,19 +72,16 @@ public class EmeraldTools implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		// Register with Pandorical if available
 		if (PandoricalApi.isAvailable()) {
 			PandoricalApi.content().registerModAssets(MOD_ID);
 		}
 
-		// Register items
 		Registry.register(BuiltInRegistries.ITEM, keyOf("emerald_pickaxe"), EMERALD_PICKAXE);
 		Registry.register(BuiltInRegistries.ITEM, keyOf("emerald_axe"), EMERALD_AXE);
 		Registry.register(BuiltInRegistries.ITEM, keyOf("emerald_shovel"), EMERALD_SHOVEL);
 		Registry.register(BuiltInRegistries.ITEM, keyOf("emerald_hoe"), EMERALD_HOE);
 		Registry.register(BuiltInRegistries.ITEM, keyOf("emerald_sword"), EMERALD_SWORD);
 
-		// Add tools to vanilla Tools creative tab
 		CreativeModeTabEvents.modifyOutputEvent(TOOLS_TAB).register(entries -> {
 			entries.accept(EMERALD_PICKAXE);
 			entries.accept(EMERALD_AXE);
@@ -97,7 +89,6 @@ public class EmeraldTools implements ModInitializer {
 			entries.accept(EMERALD_HOE);
 		});
 
-		// Add sword to vanilla Combat creative tab
 		CreativeModeTabEvents.modifyOutputEvent(COMBAT_TAB).register(entries -> {
 			entries.accept(EMERALD_SWORD);
 		});

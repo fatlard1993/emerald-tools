@@ -10,3 +10,6 @@ pluginManagement {
 }
 
 rootProject.name = 'emerald-tools-justfatlard'
+
+include ':pandorical'
+project(':pandorical').projectDir = new File(rootProject.projectDir, '../pandorical')
