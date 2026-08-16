@@ -1,5 +1,6 @@
 package justfatlard.emerald_tools;
 
+import justfatlard.pandorical.api.ItemRegistration;
 import justfatlard.pandorical.api.PandoricalApi;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
@@ -73,6 +74,11 @@ public class EmeraldTools implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		if (PandoricalApi.isAvailable()) {
+			for (String name : new String[] { "emerald_pickaxe", "emerald_axe", "emerald_shovel", "emerald_hoe", "emerald_sword" }) {
+				PandoricalApi.content().registerItem(MOD_ID + ":" + name, new ItemRegistration()
+					.model(MOD_ID + ":item/" + name)
+					.maxStackSize(1));
+			}
 			PandoricalApi.content().registerModAssets(MOD_ID);
 		}
 
