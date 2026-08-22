@@ -73,6 +73,8 @@ public class EmeraldTools implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		EmeraldSoil.register();
+
 		if (PandoricalApi.isAvailable()) {
 			for (String name : new String[] { "emerald_pickaxe", "emerald_axe", "emerald_shovel", "emerald_hoe", "emerald_sword" }) {
 				PandoricalApi.content().registerItem(MOD_ID + ":" + name, new ItemRegistration()
