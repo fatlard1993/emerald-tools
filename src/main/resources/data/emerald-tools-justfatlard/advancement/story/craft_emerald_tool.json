@@ -4,12 +4,8 @@
     "icon": {
       "id": "emerald-tools-justfatlard:emerald_pickaxe"
     },
-    "title": {
-      "translate": "advancements.story.emerald-tools-justfatlard.craft_emerald_tool.title"
-    },
-    "description": {
-      "translate": "advancements.story.emerald-tools-justfatlard.craft_emerald_tool.description"
-    }
+    "title": "Villagers Secret Weapon",
+    "description": "Craft an emerald tool"
   },
   "criteria": {
     "has_emerald_tool": {
