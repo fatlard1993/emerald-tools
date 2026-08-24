@@ -77,8 +77,13 @@ public class EmeraldTools implements ModInitializer {
 
 		if (PandoricalApi.isAvailable()) {
 			for (String name : new String[] { "emerald_pickaxe", "emerald_axe", "emerald_shovel", "emerald_hoe", "emerald_sword" }) {
+				// The kind decides which vanilla helper the client rebuilds it with, and the
+				// material carries the numbers. Without this the client's copy is a plain item
+				// and every swing is a bare-handed one.
+				String kind = name.substring(name.lastIndexOf('_') + 1);
 				PandoricalApi.content().registerItem(MOD_ID + ":" + name, new ItemRegistration()
 					.model(MOD_ID + ":item/" + name)
+					.tool(kind, EMERALD_TOOL_MATERIAL, attackDamageFor(kind), attackSpeedFor(kind))
 					.maxStackSize(1));
 			}
 			PandoricalApi.content().registerModAssets(MOD_ID);
@@ -102,5 +107,31 @@ public class EmeraldTools implements ModInitializer {
 		});
 
 		LOGGER.info("Loaded emerald-tools (server-side with Pandorical)");
+	}
+
+	/**
+	 * The same attack numbers the items above were built with.
+	 *
+	 * <p>Read from one place by both the real item and the copy the client is told to build, so
+	 * the two cannot drift apart the way they had: a tool the client does not know is a tool
+	 * swings at hand speed no matter what the server thinks it is holding.
+	 */
+	private static float attackDamageFor(String kind) {
+		return switch (kind) {
+			case "axe" -> 5.0F;
+			case "shovel" -> 1.5F;
+			case "sword" -> 3.0F;
+			case "hoe" -> 0.0F;
+			default -> 1.0F;
+		};
+	}
+
+	private static float attackSpeedFor(String kind) {
+		return switch (kind) {
+			case "sword" -> -2.4F;
+			case "pickaxe" -> -2.8F;
+			case "hoe" -> -3.0F;
+			default -> -3.0F;
+		};
 	}
 }
