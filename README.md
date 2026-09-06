@@ -32,11 +32,11 @@ Standard tool crafting patterns using **Emerald Blocks** and sticks.
 
 ## Pandorical
 
-Emerald Tools uses Pandorical to sync its custom item assets (textures) to clients. Pandorical is declared as a hard dependency in `fabric.mod.json`, so it must be installed on both server and client for this mod to load at all: there is no vanilla-client fallback. Tool stats and functionality are unaffected either way; Pandorical governs only how the tools are rendered.
+Emerald Tools uses Pandorical to sync its custom item assets (textures) to clients. Pandorical is required on both the server and every client; there is no vanilla-client fallback. Tool stats and functionality are unaffected either way; Pandorical governs only how the tools are rendered.
 
-## Installation
+## Development
 
-Install server-side alongside its declared dependencies (see `fabric.mod.json`); connecting clients need only Pandorical. Version targets live in `gradle.properties` (Minecraft, loader, Fabric API) and `fabric.mod.json` (Java).
+Installing is in [DEVELOPMENT.md](DEVELOPMENT.md).
 
 ## License
 
