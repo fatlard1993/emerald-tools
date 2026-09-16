@@ -20,7 +20,14 @@ Craft pickaxe, axe, shovel, hoe, and sword from emerald blocks. Emerald tools ar
 - Faster mining speed
 - More damage
 - Double the enchantability
+- Mines anything diamond tools can mine
+- Repairable with emerald blocks
+- Added to the vanilla Tools and Combat creative tabs
 - Crafted from emerald blocks (expensive but renewable via villager trading)
+
+### Emeralds in the Soil
+
+Very occasionally the emerald hoe turns up an emerald: breaking ground on grass, dirt or a dirt path with it has a 1 in 1500 chance to pop one out, with a chime. It is one roll per swing, not per block, so a hoe that tills an area (Useful Hoe's, say) finds them no faster than one tilling a single square.
 
 ## Screenshots
 

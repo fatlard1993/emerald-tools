@@ -8,7 +8,7 @@
     "justfatlard"
   ],
   "license": "MIT",
-  "icon": "icon.png",
+  "icon": "assets/emerald-tools-justfatlard/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
