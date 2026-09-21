@@ -1,25 +1,30 @@
 {
-  "schemaVersion": 1,
-  "id": "emerald-tools-justfatlard",
-  "version": "${version}",
-  "name": "Emerald Tools",
-  "description": "Adds tools made out of emerald blocks",
-  "authors": [
-    "justfatlard"
-  ],
-  "license": "MIT",
-  "icon": "assets/emerald-tools-justfatlard/icon.png",
-  "environment": "*",
-  "entrypoints": {
-    "main": [
-      "justfatlard.emerald_tools.EmeraldTools"
-    ]
-  },
-  "depends": {
-    "fabricloader": ">=${loaderVersion}",
-    "fabric-api": "${fabricApiVersion}",
-    "minecraft": "${minecraftDependency}",
-    "java": ">=25",
-    "pandorical": ">=15.0.0"
-  }
+	"schemaVersion": 1,
+	"id": "emerald-tools-justfatlard",
+	"version": "${version}",
+	"name": "Emerald Tools",
+	"description": "Adds tools made out of emerald blocks",
+	"authors": [
+		"justfatlard"
+	],
+	"license": "MIT",
+	"icon": "assets/emerald-tools-justfatlard/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"justfatlard.emerald_tools.EmeraldTools"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=${loaderVersion}",
+		"fabric-api": "${fabricApiVersion}",
+		"minecraft": "${minecraftDependency}",
+		"java": ">=25",
+		"pandorical": ">=15.0.0"
+	},
+	"contact": {
+		"homepage": "https://github.com/fatlard1993/emerald-tools",
+		"sources": "https://github.com/fatlard1993/emerald-tools",
+		"issues": "https://github.com/fatlard1993/emerald-tools/issues"
+	}
 }
