@@ -4,11 +4,13 @@
   ],
   "versions": {
     "2.0.1": [
-      "The mod menu icon turns up where the loader actually looks for it, and the readme owns up to what the hoe costs in emeralds."
+      "The mod menu icon turns up where the loader looks for it.",
+      "The readme owns up to what the hoe costs in emeralds."
     ],
     "2.0.0": [
       "The full set of tools, with the advancement that unlocks each recipe.",
-      "The emerald hoe turns up the odd emerald while tilling, and a tool tells the client what it is, so it looks right in every hand."
+      "The emerald hoe turns up the odd emerald while tilling.",
+      "A tool tells the client what it is, so it looks right in every hand."
     ]
   }
 }
