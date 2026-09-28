@@ -3,6 +3,9 @@
     "Pickaxe, axe, shovel, hoe and sword made out of emerald blocks: more durable than diamond, faster, hitting harder, and twice the enchantability."
   ],
   "versions": {
+    "2.0.2": [
+      "A mod menu icon of the tools, framed the way Emerald Armor's is."
+    ],
     "2.0.1": [
       "The mod menu icon loads.",
       "The readme owns up to what the hoe costs in emeralds."
