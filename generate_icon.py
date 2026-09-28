@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Generate Emerald Tools' mod menu icon: four of the tools, framed the way the armour is.
+"""Generate Emerald Tools' mod menu icon: all five tools, at full size, in frames.
 
-Emerald Armor's icon is a two by two of green pieces on brown, and these two are a pair, so
-this is the same grid with tools in it. The brown is what makes them legible: an emerald tool
-on an emerald ground is one green shape, which is what the old grey icon was avoiding and what
-the page's icon avoided by showing the armour instead.
+Emerald Armor's icon is framed items on green and these two are a pair, so this is the same
+ground with the tools on it - three above, two below, the way Quartz Tools arranges its five.
+The frames are what make them legible: an emerald tool on an emerald ground is one green
+shape, and the brown behind each one is what the head reads against.
+
+Drawn at 128x128 rather than at 16 and scaled, because five sprites at their own size do not
+fit a sixteen pixel square and shrinking them is what made the previous attempt unreadable.
 
 Pure stdlib PNG reader and writer (zlib + struct) so it runs without Pillow. No vanilla art is
 used, so no Minecraft jar is needed. Deterministic: re-running produces identical bytes.
@@ -164,41 +167,49 @@ def crop(pixels, left, top, width, height):
 
 
 def here(path):
-    """A texture this mod ships, read from the repo rather than the jar."""
+    """A texture this mod ships, read from the repo."""
     with open(os.path.join(HERE, path), "rb") as f:
         return decode_png(f.read())
 
 
 def sample(pixels, width, height):
-    """Nearest neighbour to any size, up or down. Pixel art is never smoothed."""
+    """Nearest neighbour to any size. Pixel art is never smoothed."""
     src_h, src_w = len(pixels), len(pixels[0])
     return [[pixels[y * src_h // height][x * src_w // width] for x in range(width)]
             for y in range(height)]
 
 
-def fill(colour, size=16):
-    return [[colour] * size for _ in range(size)]
+def rect(sprite, colour, left, top, width, height):
+    for y in range(top, top + height):
+        for x in range(left, left + width):
+            sprite[y][x] = colour
 
 
-GREEN = (19, 155, 55, 255)     # Emerald Armor's ground
-BROWN = (96, 53, 31, 255)      # and its frames, which the tools have to read against
-CELL = 7
+SIZE = 128
+GREEN = (19, 155, 55, 255)     # Emerald Armor's ground and its darker edge
+EDGE = (23, 120, 33, 255)
+BORDER = (90, 50, 31, 255)     # and its frames
+INNER = (96, 53, 31, 255)
+MARGIN = 4                     # the green showing round the outside
+FRAME, PAD = 36, 2             # a frame, and the wood around the item in it
 ITEMS = "src/main/resources/assets/emerald-tools-justfatlard/textures/item/%s.png"
-QUARTERS = (("emerald_pickaxe", 0, 0), ("emerald_axe", 9, 0),
-            ("emerald_sword", 0, 9), ("emerald_shovel", 9, 9))
+ROWS = ((("emerald_pickaxe", "emerald_axe", "emerald_sword"), 22, (4, 46, 88)),
+        (("emerald_shovel", "emerald_hoe"), 70, (25, 67)))
 
 
 def build_icon():
-    sprite = fill(GREEN)
-    for name, left, top in QUARTERS:
-        for y in range(top, top + CELL):
-            for x in range(left, left + CELL):
-                sprite[y][x] = BROWN
-        stamp(sprite, sample(here(ITEMS % name), CELL, CELL), left, top)
-    return scale(sprite, 8)
+    sprite = [[EDGE] * SIZE for _ in range(SIZE)]
+    rect(sprite, GREEN, MARGIN, MARGIN, SIZE - 2 * MARGIN, SIZE - 2 * MARGIN)
+    inner = FRAME - 2 * PAD
+    for names, top, lefts in ROWS:
+        for name, left in zip(names, lefts):
+            rect(sprite, BORDER, left, top, FRAME, FRAME)
+            rect(sprite, INNER, left + PAD, top + PAD, inner, inner)
+            stamp(sprite, sample(here(ITEMS % name), inner, inner), left + PAD, top + PAD)
+    return sprite
 
 
 if __name__ == "__main__":
     icon = build_icon()
-    assert len(icon) == 128 and len(icon[0]) == 128, "mod menu icons are 128x128"
+    assert len(icon) == SIZE and len(icon[0]) == SIZE, "mod menu icons are 128x128"
     write_png(OUT, icon)
