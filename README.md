@@ -39,7 +39,7 @@ Standard tool crafting patterns using **Emerald Blocks** and sticks.
 
 ## Pandorical
 
-Emerald Tools uses Pandorical to sync its custom item assets (textures) to clients. Pandorical is required on both the server and every client; there is no vanilla-client fallback. Tool stats and functionality are unaffected either way; Pandorical governs only how the tools are rendered.
+Emerald Tools goes on the server only, and **Pandorical is required there and on every player's client**: the tools are new items, and a client without Pandorical has no entry for them.
 
 ## Development
 
