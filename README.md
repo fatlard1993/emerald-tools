@@ -24,6 +24,7 @@ Craft pickaxe, axe, shovel, hoe, and sword from emerald blocks. Emerald tools ar
 - Repairable with emerald blocks
 - Added to the vanilla Tools and Combat creative tabs
 - Crafted from emerald blocks (expensive but renewable via villager trading)
+- Takes trims at the smithing table when [Smithing Templates](https://github.com/fatlard1993/smithing-templates) is installed, shown on the tool
 
 ### Emeralds in the Soil
 

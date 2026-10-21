@@ -3,6 +3,9 @@
     "Pickaxe, axe, shovel, hoe and sword made out of emerald blocks: more durable than diamond, faster, hitting harder, and twice the enchantability."
   ],
   "versions": {
+    "2.1.0": [
+      "With Smithing Templates installed, emerald tools take trims at the smithing table, and the trim shows on the tool."
+    ],
     "2.0.2": [
       "A mod menu icon of the tools, framed the way Emerald Armor's is."
     ],
