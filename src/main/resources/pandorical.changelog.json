@@ -1,8 +1,13 @@
 {
   "overview": [
-    "Pickaxe, axe, shovel, hoe and sword made out of emerald blocks: more durable than diamond, faster, hitting harder, and twice the enchantability."
+    "Pickaxe, axe, shovel, hoe and sword made out of emerald blocks: diamond's mining and damage, netherite's durability, and twice diamond's enchantability."
   ],
   "versions": {
+    "2.2.0": [
+      "Emerald tools mine and hit exactly like diamond (speed 8, +3 damage), and last as long as netherite, the same deal as Emerald Armor.",
+      "The emerald hoe swings like a hoe again; it had been hitting for 4.5 at axe speed.",
+      "Tools already in a world take the new numbers."
+    ],
     "2.1.0": [
       "With Smithing Templates installed, emerald tools take trims at the smithing table, and the trim shows on the tool."
     ],

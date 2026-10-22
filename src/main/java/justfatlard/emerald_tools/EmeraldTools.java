@@ -28,9 +28,9 @@ public class EmeraldTools implements ModInitializer {
 
 	public static final ToolMaterial EMERALD_TOOL_MATERIAL = new ToolMaterial(
 		BlockTags.INCORRECT_FOR_DIAMOND_TOOL,  // Can mine everything diamond can
-		1717,                                   // Durability
-		9.0f,                                   // Mining speed
-		3.5f,                                   // Attack damage bonus
+		2031,                                   // Durability
+		8.0f,                                   // Mining speed
+		3.0f,                                   // Attack damage bonus
 		20,                                     // Enchantability
 		EMERALD_TOOL_REPAIR_ITEMS              // Repair items tag
 	);
@@ -47,27 +47,27 @@ public class EmeraldTools implements ModInitializer {
 	);
 
 	public static final Item EMERALD_PICKAXE = new EmeraldPickaxeItem(
-		EMERALD_TOOL_MATERIAL, 1, -2.8F,
+		EMERALD_TOOL_MATERIAL, attackDamageFor("pickaxe"), attackSpeedFor("pickaxe"),
 		new Item.Properties().setId(keyOf("emerald_pickaxe"))
 	);
 
 	public static final Item EMERALD_AXE = new EmeraldAxeItem(
-		EMERALD_TOOL_MATERIAL, 5, -3.0F,
+		EMERALD_TOOL_MATERIAL, attackDamageFor("axe"), attackSpeedFor("axe"),
 		new Item.Properties().setId(keyOf("emerald_axe"))
 	);
 
 	public static final Item EMERALD_SHOVEL = new EmeraldShovelItem(
-		EMERALD_TOOL_MATERIAL, 1.5F, -3.0F,
+		EMERALD_TOOL_MATERIAL, attackDamageFor("shovel"), attackSpeedFor("shovel"),
 		new Item.Properties().setId(keyOf("emerald_shovel"))
 	);
 
 	public static final Item EMERALD_HOE = new EmeraldHoeItem(
-		EMERALD_TOOL_MATERIAL, 0, -3.0F,
+		EMERALD_TOOL_MATERIAL, attackDamageFor("hoe"), attackSpeedFor("hoe"),
 		new Item.Properties().setId(keyOf("emerald_hoe"))
 	);
 
 	public static final Item EMERALD_SWORD = new EmeraldSwordItem(
-		EMERALD_TOOL_MATERIAL, 3, -2.4F,
+		EMERALD_TOOL_MATERIAL, attackDamageFor("sword"), attackSpeedFor("sword"),
 		new Item.Properties().setId(keyOf("emerald_sword"))
 	);
 
@@ -121,7 +121,7 @@ public class EmeraldTools implements ModInitializer {
 			case "axe" -> 5.0F;
 			case "shovel" -> 1.5F;
 			case "sword" -> 3.0F;
-			case "hoe" -> 0.0F;
+			case "hoe" -> -3.0F;
 			default -> 1.0F;
 		};
 	}
@@ -130,7 +130,7 @@ public class EmeraldTools implements ModInitializer {
 		return switch (kind) {
 			case "sword" -> -2.4F;
 			case "pickaxe" -> -2.8F;
-			case "hoe" -> -3.0F;
+			case "hoe" -> 0.0F;
 			default -> -3.0F;
 		};
 	}

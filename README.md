@@ -10,15 +10,14 @@ Craft pickaxe, axe, shovel, hoe, and sword from emerald blocks. Emerald tools ar
 
 | Stat | Emerald | Diamond |
 |------|---------|---------|
-| Durability | 1717 | 1561 |
-| Mining Speed | 9.0 | 8.0 |
-| Attack Damage Bonus | +3.5 | +3.0 |
+| Durability | 2031 | 1561 |
+| Mining Speed | 8.0 | 8.0 |
+| Attack Damage Bonus | +3.0 | +3.0 |
 | Enchantability | 20 | 10 |
 
 **Highlights:**
-- Higher durability than diamond
-- Faster mining speed
-- More damage
+- Mines and hits exactly like diamond
+- Netherite's durability
 - Double the enchantability
 - Mines anything diamond tools can mine
 - Repairable with emerald blocks
