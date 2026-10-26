@@ -26,5 +26,12 @@
 		"homepage": "https://github.com/fatlard1993/emerald-tools",
 		"sources": "https://github.com/fatlard1993/emerald-tools",
 		"issues": "https://github.com/fatlard1993/emerald-tools/issues"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.donate": "https://github.com/sponsors/fatlard1993"
+			}
+		}
 	}
 }
