@@ -1,0 +1,38 @@
+{
+  "demo": {
+    "name": "Emerald Tools",
+    "icon": "emerald-tools-justfatlard:emerald_pickaxe",
+    "about": [
+      "Tools of emerald blocks: they mine and hit like diamond, last like netherite, and take enchantments twice as well.",
+      "Dig, chop and fight with the full set. Till some grass with the hoe: once in a long while it turns up an emerald."
+    ]
+  },
+  "pvp_preset": 1,
+  "needs": ["emerald-tools-justfatlard"],
+  "preset": {
+    "name": "Emerald Tools",
+    "icon": "emerald-tools-justfatlard:emerald_pickaxe",
+    "pvp": false,
+    "game_mode": "survival",
+    "entry_kit": [
+      {"slot": 0, "item": {"id": "emerald-tools-justfatlard:emerald_pickaxe", "count": 1}},
+      {"slot": 1, "item": {"id": "emerald-tools-justfatlard:emerald_axe", "count": 1}},
+      {"slot": 2, "item": {"id": "emerald-tools-justfatlard:emerald_shovel", "count": 1}},
+      {"slot": 3, "item": {"id": "emerald-tools-justfatlard:emerald_hoe", "count": 1}},
+      {"slot": 4, "item": {"id": "emerald-tools-justfatlard:emerald_sword", "count": 1}},
+      {"slot": 5, "item": {"id": "minecraft:cooked_beef", "count": 8}}
+    ],
+    "respawn_kit": "entry",
+    "goal": "time",
+    "mobs": "always",
+    "mob_rarity": "rare",
+    "mob_default": "off",
+    "mob_levels": { "minecraft:zombie": "normal" },
+    "life": 15,
+    "size": 3,
+    "world": "overworld",
+    "shape": "natural",
+    "biome": "minecraft:windswept_hills",
+    "weather": "clear"
+  }
+}
