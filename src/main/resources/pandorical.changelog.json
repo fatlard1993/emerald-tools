@@ -3,6 +3,9 @@
     "Pickaxe, axe, shovel, hoe and sword made out of emerald blocks: diamond's mining and damage, netherite's durability, and twice diamond's enchantability."
   ],
   "versions": {
+    "2.2.4": [
+      "A demo to play in PvP Dimensions' onboarding."
+    ],
     "2.2.3": [
       "Drop changelog notes for changes nothing in the game shows."
     ],
