@@ -3,7 +3,7 @@
 	"id": "emerald-tools-justfatlard",
 	"version": "${version}",
 	"name": "Emerald Tools",
-	"description": "Adds tools made out of emerald blocks",
+	"description": "Tools made from emerald blocks",
 	"authors": [
 		"justfatlard"
 	],
